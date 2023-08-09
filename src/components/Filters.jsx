@@ -1,8 +1,10 @@
+import "./Filters.css"
+
 export function Filters () {
     return (
         <section className="filters">
             <div>
-                <label htmlFor="price">Price</label>
+                <label htmlFor="price">Precio</label>
                 <input 
                 type="range" 
                 id="price"
