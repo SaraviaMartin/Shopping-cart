@@ -1,3 +1,4 @@
+import "./Cart.css"
 import { useId } from "react"
 import {CartIcon, ClearCartIcon} from "./Icons.jsx"
 
@@ -21,7 +22,7 @@ export function Cart () {
                         </div>
                         <footer>
                             <small>
-                                QTY: 1
+                                Cantidad: 1
                             </small>
                             <button>+</button>
                         </footer>
