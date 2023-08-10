@@ -7,15 +7,14 @@ import { IS_DEVELOPMENT } from "./config"
 import { useFilters } from "./hooks/useFilters"
 
 function App() {
-  const [products] = useState(initialProducts)
-  const { filters, filterProducts} = useFilters()
-  const filteredProducts = filterProducts(products)
+  const { filterProducts} = useFilters()
+  const filteredProducts = filterProducts(initialProducts)
 
   return (
     <>
       <Header/>
       <Products products={filteredProducts}/>
-      {IS_DEVELOPMENT && <Footer filters={filters}/>}
+      {IS_DEVELOPMENT && <Footer/>}
 
     </>
   )
