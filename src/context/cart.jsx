@@ -14,8 +14,8 @@ export function CartProvider ({children }) {
         if(productInCartIndex >= 0){
             //Una forma seria usando structuredClone
             const newCart = structuredClone(cart)
-            newCart[productInCartIndex] += 1
-            return setCart[newCart]
+            newCart[productInCartIndex].quantity += 1
+            return setCart(newCart)
         }
 
         //Si el producto no esta en el carrito
