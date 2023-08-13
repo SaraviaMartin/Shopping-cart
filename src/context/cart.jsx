@@ -4,6 +4,17 @@ import { createContext, useState } from "react";
 //Crear contexto
 export const CartContext = createContext()
 
+const initialState = []
+const reducer = (state, action) => {
+    switch(action.type) {
+        const {payload }
+        case 'ADD_TO_CART': {
+            const productInCartIndex = state.findIndex(item => item.id === action.payload.id)
+        }
+    }
+    return state
+}
+
 //Crear Provider
 export function CartProvider ({children }) {
     const [cart, setCart]=useState([])
