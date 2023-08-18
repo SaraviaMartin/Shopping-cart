@@ -54,3 +54,11 @@
     height: 100%;
     display: block;
   }
+
+  .cart-paybutton {
+    margin-right: 10px;
+    height: 45px;
+  }
+  .cart-paybutton:hover{
+    background-color: rgba(48, 220, 48, 0.34);
+  }
