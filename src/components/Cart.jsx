@@ -2,6 +2,7 @@ import "./Cart.css"
 import { useId } from "react"
 import {CartIcon, ClearCartIcon} from "./Icons.jsx"
 import { useCart } from "../hooks/useCart.js"
+import {PayTheProduct} from "./PayTheProduct.jsx"
 
 function CartItem ({thumbnail, price, title, quantity, addToCart}){
     return (
@@ -24,7 +25,7 @@ function CartItem ({thumbnail, price, title, quantity, addToCart}){
 
 export function Cart () {
     const cartCheckboxId = useId()
-    const {cart, clearCart, addToCart, poccedToPay} = useCart()
+    const {cart, clearCart, addToCart} = useCart()
 
     return (
         <>
@@ -43,8 +44,8 @@ export function Cart () {
                         />
                     ))}
                 </ul>
-                <button className="cart-paybutton" onClick={poccedToPay}>
-                    COMPRAR
+                <button className="cart-paybutton">
+                    <PayTheProduct/>
                 </button>
                 <button onClick={clearCart}>
                     <ClearCartIcon/>
