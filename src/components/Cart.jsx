@@ -25,7 +25,7 @@ function CartItem ({thumbnail, price, title, quantity, addToCart}){
 
 export function Cart () {
     const cartCheckboxId = useId()
-    const {cart, clearCart, addToCart} = useCart()
+    const {cart, clearCart, addToCart, payment} = useCart()
 
     return (
         <>
@@ -44,7 +44,7 @@ export function Cart () {
                         />
                     ))}
                 </ul>
-                <button className="cart-paybutton">
+                <button className="cart-paybutton" onClick={payment}>
                     <PayTheProduct/>
                 </button>
                 <button onClick={clearCart}>
